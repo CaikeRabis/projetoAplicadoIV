@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import CalendarScreen from './screens/CalendarScreen';
+import StudyRoomsScreen from './screens/StudyRoomsScreen';
 
 const Stack = createStackNavigator();
 
@@ -14,17 +15,22 @@ export default function App() {
         <Stack.Screen 
           name="Login" 
           component={LoginScreen} 
-          options={{ headerShown: false }}
+          options={{ title: 'Login' }}
         />
         <Stack.Screen 
           name="Home" 
           component={HomeScreen} 
-          options={{ title: 'ClassConnect' }}
+          options={{ title: 'Página Inicial' }}
         />
-         <Stack.Screen 
+        <Stack.Screen 
           name="Calendar" 
           component={CalendarScreen} 
           options={{ title: 'Calendário de Eventos' }}
+        />
+        <Stack.Screen 
+          name="StudyRooms" 
+          component={StudyRoomsScreen} 
+          options={{ title: 'Salas de Estudo' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
