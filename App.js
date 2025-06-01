@@ -5,6 +5,8 @@ import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import CalendarScreen from './screens/CalendarScreen';
 import StudyRoomsScreen from './screens/StudyRoomsScreen';
+import MaterialScreen from './screens/MaterialScreen'; // Importe a tela
+
 
 const Stack = createStackNavigator();
 
@@ -31,6 +33,11 @@ export default function App() {
           name="StudyRooms" 
           component={StudyRoomsScreen} 
           options={{ title: 'Salas de Estudo' }}
+        />
+        <Stack.Screen 
+        name="Material" 
+        component={MaterialScreen} 
+        options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

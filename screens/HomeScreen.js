@@ -35,7 +35,10 @@ const HomeScreen = ({ navigation }) => {
                 <Text style={styles.cardDescription}>Eventos e atividades</Text>
               </TouchableOpacity>
               
-              <TouchableOpacity style={styles.card}>
+              <TouchableOpacity 
+                style={styles.card}
+                onPress={() => navigation.navigate('Material')}
+              >
                 <Text style={styles.cardTitle}>📖 Material</Text>
                 <Text style={styles.cardDescription}>Acesse o material de aula</Text>
               </TouchableOpacity>
@@ -66,10 +69,7 @@ const HomeScreen = ({ navigation }) => {
       case 'materials':
         return (
           <View style={styles.content}>
-            <Text style={styles.title}>Material de Aula</Text>
-            <View style={styles.materialContainer}>
-              <Text style={styles.materialText}>Esta seção será implementada em breve</Text>
-            </View>
+            <Text style={styles.title}>Redirecionando...</Text>
           </View>
         );
       case 'profile':
@@ -129,7 +129,9 @@ const HomeScreen = ({ navigation }) => {
         
         <TouchableOpacity 
           style={[styles.navItem, activeTab === 'materials' && styles.activeNavItem]}
-          onPress={() => setActiveTab('materials')}
+          onPress={() => {
+            navigation.navigate('Material');
+          }}
         >
           <Text style={[styles.navIcon, activeTab === 'materials' && styles.activeNavText]}>📚</Text>
           <Text style={[styles.navLabel, activeTab === 'materials' && styles.activeNavText]}>Material</Text>

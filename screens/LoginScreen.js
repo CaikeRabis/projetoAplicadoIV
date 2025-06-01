@@ -33,7 +33,11 @@ const LoginScreen = ({ navigation }) => {
     >
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.logoContainer}>
-          <Text style={styles.logoText}>ClassConnect</Text>
+          <Image
+            source={require('../assets/classconnect-logo.png')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
         </View>
 
         <View style={styles.formContainer}>
@@ -120,10 +124,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 40,
   },
-  logoText: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#4A6FFF',
+  logoImage: {
+    width: 220,
+    height: 200,
   },
   formContainer: {
     backgroundColor: '#FFFFFF',
